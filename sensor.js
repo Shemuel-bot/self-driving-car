@@ -1,7 +1,7 @@
 class Sensor {
   constructor(car) {
     this.car = car;
-    this.rayCount = 30;
+    this.rayCount = 5;
     this.rayLength = 150;
     this.raySpread = Math.PI / 2;
 
@@ -21,7 +21,7 @@ class Sensor {
     let touches = [];
 
     for (let i = 0; i < roadBorders.length; i++) {
-      const touch = getInterSection(
+      const touch = getIntersection(
         ray[0],
         ray[1],
         roadBorders[i][0],
@@ -76,7 +76,15 @@ class Sensor {
 
       ctx.stroke();
 
-      
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "black";
+      ctx.moveTo(this.rays[i][1].x, this.rays[i][1].y);
+      ctx.lineTo(end.x, end.y)
+
+      ctx.stroke();
+
+
     }
   }
 }
