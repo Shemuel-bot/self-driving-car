@@ -1,4 +1,4 @@
-class Visualizer{
+﻿class Visualizer{
     static drawNetwork(ctx,network){
         const margin=50;
         const left=margin;
@@ -107,12 +107,4 @@ class Visualizer{
                 :index/(nodes.length-1)
         );
     }
-}
-
-function getRGBA(value){
-    const alpha=Math.abs(value);
-    const R=value<0?0:255;
-    const G=R;
-    const B=value>0?0:255;
-    return "rgba("+R+","+G+","+B+","+alpha+")";
 }

@@ -1,15 +1,15 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: darkgray;
-    overflow: hidden;
+    margin:0;
+    background:darkgray;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 #verticalButtons{
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
 }
 
 button{
@@ -17,17 +17,15 @@ button{
     border-radius: 5px;
     padding: 5px 5px 7px 5px;
     margin: 2px;
-    cursor: pointer;
+    cursor:pointer;
 }
-
 button:hover{
-    background-color: blue;
-}
-
-#carCanvas{
-    background-color: lightgray;
+    background:blue;
 }
 
 #networkCanvas{
-    background-color: black;
+    background:black;
+}
+#carCanvas{
+    background:lightgray;
 }
