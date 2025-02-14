@@ -8,12 +8,25 @@ const carCtx  = carCanvas.getContext("2d")
 const networkCtx = networkCanvas.getContext("2d")
 
 const road = new Road(carCanvas.width/2,carCanvas.width*0.9)
-const car = new Car(road.getLineCenter(1), 100, 30, 50, "AI")
+
+const N = 100
+const cars = generateCars(N)
+
+
+
 const traffic = [
     new Car(road.getLineCenter(1), -100,30,50, "DUMMY",2)
 ]
 
 animate()
+
+function generateCars(N) {
+    const cars = []
+    for (let i = 1; i < N; i++) {
+        car.push(new Car(road.getLineCenter(1), 100, 30, 50, "AI"))
+    }
+    return cars
+}
 
 function animate() {
     for (let i = 0; i < traffic.length; i++) {
@@ -35,5 +48,7 @@ function animate() {
     car.draw(carCtx, "blue")
 
     carCtx.restore()
+
+    Visualizer.drawNetwork(networkCtx, car.brain)
     requestAnimationFrame(animate)
 }
