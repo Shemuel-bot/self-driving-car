@@ -12,5 +12,9 @@ class CarInstantiator {
                 new Car(road.getLaneCenter(Math.round(Math.random()*2)), position,30,50,"DUMMY",2,getRandomColor())
             )
         }
+        else{
+            this.traffic.shift()
+        } 
+
     }
 }
