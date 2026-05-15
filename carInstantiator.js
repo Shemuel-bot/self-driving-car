@@ -1,5 +1,5 @@
 class CarInstantiator {
-    constructor(traffic=[], distance = -200, maxTraffic = 100, spawnInterval = 20) {
+    constructor(traffic=[], distance = -200, maxTraffic = 150, spawnInterval = 10) {
         this.traffic = traffic
         this.distance = distance
         this.maxTraffic = maxTraffic
